@@ -21,3 +21,5 @@ class Game{ //ชื่อclass ใช้upper camel case
   }
 }
 
+
+

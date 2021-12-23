@@ -4,12 +4,10 @@ import 'dart:io';
 import 'dart:math';
 import 'game.dart';
 
-void main() {
+  playGame() {
   const maxRandom = 100;
   var game = Game();
-
   var isCorrect = false;
-
 
   print('╔════════════════════════════════════════');
   print('║            GUESS THE NUMBER            ');
@@ -23,7 +21,6 @@ void main() {
       continue;
     }
 
-    // guessCount++;
     var result = game.doGuess(guess);
     var guessCount = game.count;
 
@@ -42,4 +39,21 @@ void main() {
 
   print('║                 THE END                ');
   print('╚════════════════════════════════════════');
+}
+
+void main() {
+  var isPlay = false;
+  playGame();
+  do {
+    stdout.write('Play again? (Y/N) : ');
+    var ask = stdin.readLineSync();
+
+    if (ask == 'Y' || ask == 'y') {
+      playGame();
+    } else if (ask == 'N' || ask == 'n') {
+      print('         ❤❤❤❤❤❤❤❤');
+      print('❤ Goodbye, Have a nice day! ❤');
+      isPlay = true;
+    }
+  } while (!isPlay);
 }
