@@ -4,7 +4,7 @@ import 'dart:io';
 import 'dart:math';
 import 'game.dart';
 
-  playGame() {
+playGame() {
   const maxRandom = 100;
   var game = Game();
   var isCorrect = false;
@@ -51,8 +51,10 @@ void main() {
     if (ask == 'Y' || ask == 'y') {
       playGame();
     } else if (ask == 'N' || ask == 'n') {
-      print('         ❤❤❤❤❤❤❤❤');
-      print('❤ Goodbye, Have a nice day! ❤');
+      print('───────────────────────────────────────');
+      print('       Goodbye, Have a nice day!');
+      print('═══════════════════════════════════════');
+      print('     ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤');
       isPlay = true;
     }
   } while (!isPlay);
